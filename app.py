@@ -70,8 +70,6 @@ def afficher_personnes():
             <td>{{ p[0] }}</td>
             <td>{{ p[1] }}</td>
             <td>{{ p[2] }}</td>
-            <td>{{ p[3] }}</td>
-            <td>{{ p[4] }}</td>
         </tr>
         {% endfor %}
     </table>
