@@ -45,10 +45,10 @@ def index():
     conn = get_db_connection()
     cur = conn.cursor()
     # On récupère les données de la table Personel
-    cur.execute("SELECT id, Prénoms, lastname FROM Personel")
+    cur.execute("SELECT id, Prénoms, Nom FROM Personel")
     # On transforme les résultats en liste de dictionnaires pour un accès plus lisible dans le template
     Personel = [
-        {"id": row[0], "Prénoms": row[1], "lastname": row[2]}
+        {"id": row[0], "Prénoms": row[1], "Nom": row[2]}
         for row in cur.fetchall()
     ]
     cur.close()
