@@ -63,7 +63,7 @@ def afficher_personnes():
     <h1>Liste du Personel</h1>
     <table border="1">
         <tr>
-            <th>ID</th><th>Nom</th><th>Prénom</th><th>Âge</th><th>Job</th>
+            <th>ID</th><th>Nom</th><th>Prénom</th>
         </tr>
         {% for p in personnes %}
         <tr>
