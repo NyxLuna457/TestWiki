@@ -29,9 +29,6 @@ finally:
     if 'connection' in locals() and connection.is_connected():
         connection.close()
 
-
-app = Flask(__name__)
-
 def get_db_connection():
     return mariadb.connect(
         host=os.getenv('DB_HOST'),
