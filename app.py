@@ -47,7 +47,7 @@ db_config = {
     'database': os.getenv('DB_NAME')
 }
 
-@app.route('/')
+@app.route('/personnes')
 def afficher_personnes():
     try:
         conn = mariadb.connect(**db_config)
