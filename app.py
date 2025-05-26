@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template_string
 import os
 from dotenv import load_dotenv
 import mysql.connector
