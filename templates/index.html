@@ -1,9 +1,26 @@
-<html>
-    <head>
-        <title>La page statique de Nyx</title>
-    </head>
-    <body>
-        <h1>Bienvenue sur la meilleure page web!</h1>
-        <p>Ceci est une page HTML servie par Flask</p>
-    </body>
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des personnes</title>
+</head>
+<body>
+    <h1>Table Personel</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+        </tr>
+        {% for person in Personel %}
+        <tr>
+            <td>{{ person }}</td>
+            <td>{{ person }}</td>
+            <td>{{ person }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
 </html>
