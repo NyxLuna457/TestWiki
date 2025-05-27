@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import mysql.connector
 import os
 import mariadb
+from prometheus_flask_exporter import PrometheusMetrics
 
 load_dotenv()
 
@@ -73,6 +74,11 @@ def afficher_personnes():
     '''
     return render_template_string(html, personnes=personnes)
 
+metrics = PrometheusMetrics(app)
+
+@app.route('/')
+def index():
+return "Hello, world!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
