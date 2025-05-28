@@ -27,4 +27,4 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > id_rsa
           chmod 600 id_rsa
-          ssh -o StrictHostKeyChecking=no -i id_rsa nyx@100.114.57.119/ 'cd /TestWiki && ./deploy.sh'
+          ssh -o StrictHostKeyChecking=no -i id_rsa nyx@100.114.57.119 'cd /TestWiki && ./deploy.sh'
